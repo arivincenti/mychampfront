@@ -56,9 +56,5 @@ export class TeamComponent implements OnInit
     });
     
   }
-
-  // enviar(){
-  //   this.childEvent.emit("Hola desde el componente hijo");
-  // }
-
+  
 }
