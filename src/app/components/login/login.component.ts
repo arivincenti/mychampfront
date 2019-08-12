@@ -31,28 +31,30 @@ export class LoginComponent implements OnInit {
 
       console.log("Formulario posteado");
       console.log(this.form);
+      this.user.email = this.form.get('email').value;
+      this.user.password = this.form.get('password').value;
 
-    // Swal.fire({
-    //   allowOutsideClick: false,
-    //   type: 'info',
-    //   text: 'Espere por favor'
-    // });
+    Swal.fire({
+      allowOutsideClick: false,
+      type: 'info',
+      text: 'Espere por favor'
+    });
 
-    // Swal.showLoading();
+    Swal.showLoading();
 
-    // this.auth.getToken(this.user).subscribe(data => {
-    //   console.log(data);
-    //   this.router.navigateByUrl('/tournaments');
-    //   Swal.close();
+    this.auth.getToken(this.user).subscribe(data => {
+      console.log(data);
+      this.router.navigateByUrl('/tournaments');
+      Swal.close();
 
-    // }, (err) => {
-    //   console.log(err);
-    //   Swal.fire({
-    //     allowOutsideClick: false,
-    //     type: 'error',
-    //     title: 'Error al iniciar sesión',
-    //     text: err.error.message
-    //   });
-    // });
+    }, (err) => {
+      console.log(err);
+      Swal.fire({
+        allowOutsideClick: false,
+        type: 'error',
+        title: 'Error al iniciar sesión',
+        text: err.error.message
+      });
+    });
   }
 }
