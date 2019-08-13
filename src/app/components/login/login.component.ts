@@ -29,8 +29,6 @@ export class LoginComponent implements OnInit {
 
   login(){
 
-      console.log("Formulario posteado");
-      console.log(this.form);
       this.user.email = this.form.get('email').value;
       this.user.password = this.form.get('password').value;
 
@@ -43,7 +41,6 @@ export class LoginComponent implements OnInit {
     Swal.showLoading();
 
     this.auth.getToken(this.user).subscribe(data => {
-      console.log(data);
       this.router.navigateByUrl('/tournaments');
       Swal.close();
 

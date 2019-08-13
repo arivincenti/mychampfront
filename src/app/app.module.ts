@@ -12,6 +12,7 @@ import { TeamService } from './services/team/team.service';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ErrorComponent } from './components/error/error.component';
+import { TeamFormComponent } from './components/team-form/team-form.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ErrorComponent } from './components/error/error.component';
     LoginComponent,
     SignupComponent,
     ErrorComponent,
+    TeamFormComponent,
     // routingComponents
   ],
   imports: [

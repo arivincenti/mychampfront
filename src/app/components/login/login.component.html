@@ -21,14 +21,12 @@
           El password debe tener al menos 3 caracteres
         </div>
       </div>
-      <div class="form-group">
-        <small><a routerLink='/signup'>No tengo cuenta / Registrarme</a></small>
-      </div>
       <button type="submit" [ngClass]="{'disabled': form.invalid}"
         class="btn btn-outline-primary btn-block mt-3">Ingresar
       </button>
+      <button type="button"
+        class="btn btn-outline-warning btn-block mt-3" routerLink="/signup">Crearme una cuenta
+      </button>
     </form>
-
-    {{form.valid}}
   </div>
 </div>

@@ -11,9 +11,6 @@ import { TeamModel } from 'src/app/models/team.model';
 export class TeamComponent implements OnInit
 {
 
-  // @Input('dato') name:string;
-  // @Output() childEvent = new EventEmitter();
-
   teams:TeamModel[] = [];
   errorMsg = "";
   team:TeamModel;
